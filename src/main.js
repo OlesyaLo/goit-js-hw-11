@@ -31,6 +31,10 @@ function onSearch(event) {
   const request = event.target.elements.text.value.trim();
 
   if (!request) {
+    loader.classList.remove('loader');
+    iziToast.error({
+      message: 'Please enter a search query!',
+    });
     return;
   }
 
@@ -46,7 +50,13 @@ function onSearch(event) {
         simpleLightbox.refresh();
       }
     })
-    .catch(error => console.log(error))
+    .catch(error => {
+      iziToast.error({
+        message:
+          'Oops! There was a problem loading the images. Please try again later!',
+      });
+      alert(error.message);
+    })
     .finally(() => {
       searchForm.reset();
       loader.classList.toggle('loader');
