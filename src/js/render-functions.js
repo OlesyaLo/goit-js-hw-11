@@ -17,14 +17,13 @@ export function createMarkup(arr) {
                     src="${webformatURL}"
                     alt="${tags}"
                     width="360px"
-                    height="152px"
-                />
+                    height="152px"/>
             </a>
     <ul class="img-text-container"> 
-    <li class="img-text">Likes<p class="data">${likes}</p></li>
-    <li class="img-text">Views<p class="data">${views}</p></li>
-    <li class="img-text">Comments<p class="data">${comments}</p></li>
-    <li class="img-text">Downloads<p class="data">${downloads}</p></li>
+    <li class="img-text">Likes<p class="img-data">${likes}</p></li>
+    <li class="img-text">Views<p class="img-data">${views}</p></li>
+    <li class="img-text">Comments<p class="img-data">${comments}</p></li>
+    <li class="img-text">Downloads<p class="img-data">${downloads}</p></li>
     </ul>
    </li>`
     )
