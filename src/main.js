@@ -38,7 +38,6 @@ function onSearch(event) {
     .then(response => {
       if (response.total === 0) {
         iziToast.error({
-          title: 'Error',
           message:
             'Sorry, there are no images matching your search query. Please try again!',
         });
